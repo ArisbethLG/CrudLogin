@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1F1E25"
+    android:backgroundTint="#13131C"
+    android:visibility="visible"
+    tools:context=".MainActivity">
+
+   <LinearLayout
+       android:id="@+id/linearLayout"
+       android:layout_width="0dp"
+       android:layout_height="0dp"
+       android:layout_marginStart="16dp"
+       android:layout_marginTop="16dp"
+       android:layout_marginEnd="16dp"
+       android:layout_marginBottom="16dp"
+       android:orientation="vertical"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent">
+
+      <SearchView
+          android:id="@+id/search"
+          android:layout_width="1dp"
+          android:layout_height="3dp"
+          android:background="#FFFFFF"
+          android:backgroundTint="#FFFFFF"
+          android:queryHint="Buscar"
+          tools:visibility="invisible" />
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center"
+          android:orientation="horizontal">
+
+         <Button
+             android:id="@+id/btn_add_fragment"
+             android:layout_width="15dp"
+             android:layout_height="19dp"
+             android:layout_weight="1"
+             android:backgroundTint="@color/white"
+             android:text="agregar fragment"
+             android:textSize="8sp"
+             android:visibility="invisible"
+             app:cornerRadius="0dp"
+             tools:visibility="gone" />
+
+         <Button
+             android:id="@+id/btn_add"
+             android:layout_width="320dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:backgroundTint="@color/teal_700"
+             android:text="AÑADIR"
+             android:textSize="12sp"
+             app:cornerRadius="50dp" />
+
+      </LinearLayout>
+
+      <Space
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content" />
+
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/recyclerViewSingle"
+          android:layout_width="match_parent"
+          android:layout_height="528dp">
+
+      </androidx.recyclerview.widget.RecyclerView>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="horizontal">
+
+         <Space
+             android:layout_width="210dp"
+             android:layout_height="47dp"
+             tools:visibility="invisible" />
+
+         <Button
+             android:id="@+id/btn_close"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:backgroundTint="#06C699"
+             android:text="cerrar sesión"
+             app:cornerRadius="50dp" />
+
+         <Space
+             android:layout_width="83dp"
+             android:layout_height="39dp"
+             android:layout_weight="1" />
+
+      </LinearLayout>
+
+   </LinearLayout>
+
+   <Space
+       android:layout_width="210dp"
+       android:layout_height="47dp"
+       android:layout_weight="1"
+       tools:layout_editor_absoluteX="379dp"
+       tools:layout_editor_absoluteY="603dp"
+       tools:visibility="invisible" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#13131C"
+    tools:context=".CreatePetActivity">
+
+   <LinearLayout
+       android:id="@+id/linearLayout2"
+       android:layout_width="374dp"
+       android:layout_height="701dp"
+       android:layout_marginStart="16dp"
+       android:layout_marginTop="16dp"
+       android:layout_marginEnd="16dp"
+       android:layout_marginBottom="16dp"
+       android:orientation="vertical"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent">
+
+      <LinearLayout
+          android:id="@+id/images_btn"
+          android:layout_width="match_parent"
+          android:layout_height="2dp"
+          android:gravity="center"
+          android:orientation="vertical"
+          android:visibility="visible">
+
+         <androidx.cardview.widget.CardView
+             android:layout_width="150dp"
+             android:layout_height="150dp"
+             app:cardCornerRadius="70dp"
+             tools:visibility="gone">
+
+            <ImageView
+                android:id="@+id/pet_photo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#151825"
+                android:backgroundTint="#151825"
+                app:srcCompat="@android:drawable/screen_background_dark_transparent"
+                tools:visibility="gone" />
+         </androidx.cardview.widget.CardView>
+
+         <LinearLayout
+             android:layout_width="25dp"
+             android:layout_height="2dp"
+             android:gravity="center"
+             android:orientation="horizontal"
+             tools:visibility="invisible">
+
+         </LinearLayout>
+
+         <Button
+             android:id="@+id/btn_photo"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:backgroundTint="@color/white"
+             android:drawableLeft="@drawable/ic_edit"
+             tools:visibility="invisible" />
+
+         <Button
+             android:id="@+id/btn_remove_photo"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:background="#27272E"
+             android:backgroundTint="#1B1B20"
+             android:drawableLeft="@drawable/ic_delete"
+             tools:visibility="invisible" />
+      </LinearLayout>
+
+      <Space
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content" />
+
+      <TextView
+          android:id="@+id/textView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Nombre"
+          android:textColor="#646C6A"
+          android:textSize="16sp"
+          android:textStyle="bold" />
+
+      <EditText
+          android:id="@+id/nombre"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:ems="10"
+          android:inputType="textPersonName"
+          android:textColor="#FDFCFC" />
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Cantidad"
+          android:textColor="#646C6A"
+          android:textSize="16sp"
+          android:textStyle="bold" />
+
+      <EditText
+          android:id="@+id/edad"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:ems="10"
+          android:inputType="textPersonName"
+          android:textColor="#FFFFFF" />
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Marca"
+          android:textColor="#646C6A"
+          android:textSize="16sp"
+          android:textStyle="bold" />
+
+      <EditText
+          android:id="@+id/color"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:ems="10"
+          android:inputType="textPersonName"
+          android:textColor="#FFFFFF" />
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Precio "
+          android:textColor="#646C6A"
+          android:textSize="16sp"
+          android:textStyle="bold" />
+
+      <EditText
+          android:id="@+id/precio_vacuna"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:ems="10"
+          android:inputType="numberDecimal"
+          android:textColor="#FFFFFF" />
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="horizontal">
+
+         <Space
+             android:layout_width="131dp"
+             android:layout_height="46dp"
+             tools:visibility="invisible" />
+
+         <Button
+             android:id="@+id/btn_add"
+             android:layout_width="118dp"
+             android:layout_height="wrap_content"
+             android:backgroundTint="#19ACBF"
+             android:text="Añadir" />
+
+         <Space
+             android:layout_width="62dp"
+             android:layout_height="42dp" />
+
+      </LinearLayout>
+
+   </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
